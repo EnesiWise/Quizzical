@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import SingleQuestion from "./SingleQuestion";
-import BeatLoader from "react-spinners/BeatLoader";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function QuizPage() {
   const [questions, setQuestions] = useState([]);
@@ -10,7 +10,7 @@ function QuizPage() {
   const [numCorrectAnswers, setNumCorrectAnswers] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
-  //useState  & useEffect for page loader : BeatLoader
+  //useState  & useEffect for page loader : PropagateLoader
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
@@ -119,7 +119,7 @@ function QuizPage() {
       </Link>
 
       {loading ? (
-        <BeatLoader
+        <PropagateLoader
           color={"#4d5b9e"}
           loading={loading}
           size={10}
