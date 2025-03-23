@@ -1,4 +1,3 @@
-//import { useState } from "react";
 import HomePage from "./components/HomePage";
 import QuizPage from "./components/QuizPage";
 import blobUp from "./images/blobUp.png";
@@ -10,7 +9,7 @@ export default function App() {
     <div>
       <img className="blob-up" src={blobUp} alt="yellow-blob" />
 
-      <Router>
+      <Router basename="/Quizzical">
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="Quiz" element={<QuizPage />}></Route>
